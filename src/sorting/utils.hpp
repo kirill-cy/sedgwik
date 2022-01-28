@@ -11,9 +11,9 @@ namespace sorting {
 
     template<typename F, typename... Args>
     static void executeWithBenchmark(F func, Args&&... args) {
-        auto start = std::chrono::high_resolution_clock::now();
+        auto start = timeNow();
         func(std::forward<Args>(args)...);
-        auto finish = std::chrono::high_resolution_clock::now();
+        auto finish = timeNow();
         std::cout << duration(finish - start) << std::endl;
     }
 

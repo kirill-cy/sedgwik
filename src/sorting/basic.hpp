@@ -16,4 +16,13 @@ namespace sorting {
             exchange(array, i, min);
         }
     }
+
+    template<typename T, size_t size>
+    static auto insertion_sort(T (&array)[size]) {
+        for (int i = 1; i < size; i++) {
+            for (int j = i; j > 0 && less(array[j], array[j-1]); j--) {
+                exchange(array, j, j-1);
+            }
+        }
+    }
 }

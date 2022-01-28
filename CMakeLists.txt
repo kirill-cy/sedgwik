@@ -3,4 +3,4 @@ project(sedgwik)
 
 set(CMAKE_CXX_STANDARD 20)
 
-add_executable(sedgwik main.cpp src/sorting/utils.hpp src/sorting/selection.hpp)
+add_executable(sedgwik main.cpp src/sorting/utils.hpp src/sorting/basic.hpp)
